@@ -40,7 +40,7 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-docker-action@v2
       with:
-        version: '24.0.9'
+        version: '27.5.0'
 
     - name: Build Docker Image
       run: |
