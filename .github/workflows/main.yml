@@ -34,12 +34,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Set up Docker
-      uses: docker/setup-docker-action@v4
-
-    - name: Build Docker Image
-      run: docker build . -f Dockerfile -t myapp:latest
-       
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag myapp:latest
+             
